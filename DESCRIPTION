@@ -1,0 +1,6 @@
+Title: Posit Connect Off-Host Test App
+Type: Shiny
+Version: 0.0.1
+Author: Your Name
+Description: A minimal Shiny app to test off-host execution on Posit Connect.
+Test: hello2 
