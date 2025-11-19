@@ -1,25 +1,15 @@
 library(shiny)
 
 ui <- fluidPage(
-  titlePanel("Posit Connect Off-Host Test"),
+  titlePanel("Hello Posit Connect"),
   sidebarLayout(
-    sidebarPanel(
-      actionButton("btn", "Trigger Pod Initialization")
-    ),
-    mainPanel(
-      textOutput("status")
-    )
+    sidebarPanel("This is a simple app"),
+    mainPanel(textOutput("greeting"))
   )
 )
 
-server <- function(input, output, session) {
-  status <- reactiveVal("Waiting for action...")
-  
-  observeEvent(input$btn, {
-    status("Pod initialized successfully!")
-  })
-  
-  output$status <- renderText({ status() })
+server <- function(input, output) {
+  output$greeting <- renderText("Hello from Off-Host!")
 }
 
 shinyApp(ui, server)
