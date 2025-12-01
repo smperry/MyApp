@@ -1,6 +1,9 @@
+
 {
   "version": 1,
   "locale": "en_US",
+  "app_mode": "shiny",
+  "content_category": "application",
   "r": {
     "version": "4.5.1",
     "packages": ["shiny"]
